@@ -31,8 +31,8 @@ a{
     padding: 0.7% 5%;
     width: 100%;
     margin: 0;
-    background-color: #000;
-    color: #e6ffff;
+    background-color: #fff;
+    color: #000;
 }
 .nav-menu{
     display: flex;
@@ -43,7 +43,6 @@ a{
 }
 .links{
     transition: 0.3s ease;
-    color: #e6ffff;
 }
 .links:hover{
     color:#00cccc;
@@ -59,30 +58,59 @@ a{
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #e6e6e6;
+    background-color: #000;
 
 }
 
 /* main */
 #Home{
+    padding: 12% 20%;
     text-align: center;
-    padding: 5%;
-    background-color: #e6e6e6;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6ffff;
+}
+.home-text{
+    text-align: left;
+}
+.home-text h1{
+    font-size: 3rem;
+}
+.home-text p{
+    font-size: 1.5rem;
+}
+@keyframes my-animation{
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
 }
 .profile{
-    width: 25%;
-    margin: 5% auto;
-    border-radius: 50%;
-    border-right: #009999 5px solid;
-    border-bottom: #009999 5px solid;
-    transition: 1s ;
+    animation: my-animation 8s ease-in-out infinite;
+    background-image: url(/styles/images/profile.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #2d2e32;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    transition: all 1s ease-in-out;
+    width: 25rem;
+    height: 25rem;
+    
 }
 .skills{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10% auto;
+    margin: 5% auto;
     width: 100%;
 }
 .row{
@@ -95,8 +123,7 @@ a{
 .logo{
     width: 10rem;
 }
-.contact{
-    margin-top: 20%;
+#Contact{
     padding: 5% 15%;
     display: flex;
     justify-content: center;
@@ -126,18 +153,18 @@ a{
     width: 2rem;
 }
 @media (max-width: 810px){
+    #Home{
+        flex-direction: column-reverse;
+    }
+    .home-text{
+        text-align: center;
+    }
+    .profile{
+        width: 100%;
+        height: 9rem;
+    }
     .hamburger{
         display: block;
-    }
-    .nav-menu{
-        position: fixed;
-        top: 1.5rem;
-        left: -100%;
-        flex-direction: column;
-        transition: 0.3s;
-        align-items: center;
-        background-color: #000;
-        color: #e6ffff;
     }
     .nav-item{
         margin: 0 15px;
@@ -159,8 +186,7 @@ a{
         flex-direction: column;
         transition: 0.5s;
         text-align: center;
-        background-color: #000;
-        color: #e6ffff;
+        background-color: #fff;
         opacity: 95%;
         padding: 19px 0;
     }
