@@ -203,7 +203,7 @@ a{
     .logo{
         width: 4.5rem;
     }
-    .contact{
+    #Contact{
         flex-direction: column;
         gap: 80px;
     }
